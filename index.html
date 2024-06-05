@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <section id="container" class="container theme-1">
+      <div class="calculator">
+        <header class="controls">
+          <p>calc</p>
+          <div class="theme-switcher">
+            <p class="theme-text">Theme</p>
+            <div class="theme-switcher-wrapper">
+              <div class="theme-numbers">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+              </div>
+              <div class="theme-toggle-control">
+                <input
+                  type="radio"
+                  id="theme-1"
+                  name="theme"
+                  value="1"
+                  class="control-theme-1"
+                  checked
+                />
+                <label for="theme-1"></label>
+                <input
+                  type="radio"
+                  id="theme-2"
+                  name="theme"
+                  value="2"
+                  class="control-theme-2"
+                />
+                <label for="theme-2"></label>
+                <input
+                  type="radio"
+                  id="theme-3"
+                  name="theme"
+                  value="3"
+                  class="control-theme-3"
+                />
+                <label for="theme-3"></label>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="output">
+          <div id="buffer" class="buffer"></div>
+          <div id="output-text" class="text"></div>
+        </div>
+        <div class="keys">
+          <div class="key number">7</div>
+          <div class="key number">8</div>
+          <div class="key number">9</div>
+          <div id="del" class="key del">Del</div>
+          <div class="key number">4</div>
+          <div class="key number">5</div>
+          <div class="key number">6</div>
+          <div id="plus" class="key plus">+</div>
+          <div class="key number">1</div>
+          <div class="key number">2</div>
+          <div class="key number">3</div>
+          <div id="minus" class="key minus">-</div>
+          <div id="dot" class="key dot">.</div>
+          <div class="key number">0</div>
+          <div id="division" class="key division">/</div>
+          <div id="multiplication" class="key multiplication">x</div>
+          <div id="reset" class="key reset">Reset</div>
+          <div id="result" class="key result">=</div>
+        </div>
+      </div>
+    </section>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

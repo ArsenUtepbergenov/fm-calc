@@ -1,0 +1,254 @@
+@import url('https://fonts.google.com/specimen/League+Spartan');
+
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --font-size-numbers: 32px;
+  --font-size: 26px;
+  --font-weight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/* theme 1 */
+
+.container.theme-1 {
+  background-color: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+}
+
+.calculator {
+  width: 500px;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calculator .controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.calculator .controls .theme-switcher {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.calculator .controls .theme-switcher .theme-text {
+  position: relative;
+  bottom: -17px;
+}
+
+.calculator .controls .theme-switcher .theme-switcher-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.calculator .controls .theme-switcher .theme-numbers {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 18px;
+}
+
+.calculator .controls .theme-switcher .theme-toggle-control {
+  width: 125px;
+  height: 44px;
+  background: hsl(223, 31%, 20%);
+  border-radius: 30px;
+  position: relative;
+  padding: 6px;
+}
+
+.control-theme-1 + label,
+.control-theme-2 + label,
+.control-theme-3 + label {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.control-theme-1 + label {
+  left: 6px;
+}
+
+.control-theme-1:checked + label {
+  background: hsl(6, 63%, 50%);
+}
+
+.control-theme-2 + label {
+  left: 37%;
+}
+
+.control-theme-2:checked + label {
+  background: hsl(6, 63%, 50%);
+}
+
+.control-theme-3 + label {
+  right: 6px;
+}
+
+.control-theme-3:checked + label {
+  background: hsl(6, 63%, 50%);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.buffer {
+  position: absolute;
+  top: 11px;
+  font-size: 1rem;
+  color: #8bc34a;
+  right: 20px;
+}
+
+.calculator .output {
+  position: relative;
+  background-color: hsl(224, 36%, 15%);
+  flex-grow: 1;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.calculator .keys {
+  background-color: hsl(223, 31%, 20%);
+  flex-grow: 2;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding: 20px;
+  gap: 16px;
+  font-size: var(--font-size-numbers);
+}
+
+.calculator .keys .key {
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(224, 36%, 15%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border-bottom: 4px solid;
+  border-color: hsl(28, 16%, 65%);
+  cursor: pointer;
+}
+
+.calculator .keys .key.del,
+.calculator .keys .key.reset {
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(224, 28%, 35%);
+  text-transform: uppercase;
+}
+
+.calculator .keys .key.reset {
+  grid-column: 1/3;
+}
+
+.calculator .keys .key.result {
+  grid-column: 3/5;
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(6, 70%, 34%);
+}
+
+/* theme 2 */
+
+.container.theme-2 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.container.theme-2 .calculator .keys,
+.container.theme-2 .calculator .controls .theme-switcher .theme-toggle-control {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.container.theme-2 .calculator .output {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container.theme-2 .calculator .keys .key.del,
+.container.theme-2 .calculator .keys .key.reset {
+  background-color: hsl(185, 42%, 37%);
+  border-color: hsl(185, 58%, 25%);
+}
+
+/* theme 3 */
+
+.container.theme-3 {
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+.container.theme-3 .calculator .keys,
+.container.theme-3 .calculator .controls .theme-switcher .theme-toggle-control {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.container.theme-3 .calculator .keys .key {
+  background-color: hsl(268, 47%, 21%);
+  border-color: hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+}
+
+.container.theme-3 .calculator .output {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+
+.container.theme-3 .calculator .keys .key.del,
+.container.theme-3 .calculator .keys .key.reset {
+  background-color: hsl(281, 89%, 26%);
+  border-color: hsl(285, 91%, 52%);
+}
+
+.container.theme-3 .calculator .keys .key.result {
+  color: hsl(268, 71%, 12%);
+  background-color: hsl(176, 100%, 44%);
+  border-color: hsl(177, 92%, 70%);
+}
+
+.container.theme-3 .control-theme-3:checked + label {
+  background: hsl(176, 100%, 44%);
+}
+
+/* error state */
+.disable {
+  opacity: 0.6;
+  user-select: none;
+  pointer-events: none;
+}
